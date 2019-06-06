@@ -1,29 +1,22 @@
-#include <stdio.h>
-int main()
-{
-    int l, h, i, flag;
-    scanf("%d %d", &l, &h);
-
-    printf(" ", l, h);
-
-    while (l < h)
-    {
-        flag = 0;
-
-        for(i = 2; i <= l/2; ++i)
-        {
-            if(l % i == 0)
-            {
-                flag = 1;
-                break;
-            }
-        }
-
-        if (flag == 0)
-            printf("%d ", l);
-
-        ++l;
-    }
-
-    return 0;
-}
+#include<stdio.h>
+ int main()
+ {
+   int i, prime,upper,lower, n;
+   
+   scanf("%d", &lower);
+  scanf("%d", &upper);
+   printf("\n ");
+   for(n=lower+1; n<upper; n++)
+   {
+     prime = 1;
+     for(i=2; i<n/2; i++)
+       if(n%i == 0)
+       {
+         prime = 0;
+         break;
+       }
+     if(prime)
+       printf("\t%d", n);
+   }
+ }
+ 
